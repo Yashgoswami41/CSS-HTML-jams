@@ -1,0 +1,23 @@
+h1{
+    color: green;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    color: peru;
+}
+
+button{
+    color: black; background-color: green;
+}
+body{
+    background-color:#b6e8ea;
+}
+#inner{
+    font-size: 34px;
+}
+
+#outer{
+    font-size: 24px;
+}
