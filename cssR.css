@@ -2,12 +2,15 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
 header {
-    background-color: #f0f0f0;
+    background-color: #333;
     padding: 20px;
     text-align: center;
+    color: #fff;
 }
 
 main {
@@ -20,11 +23,13 @@ section {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     font-weight: bold;
     margin-top: 0;
+    color: #333;
 }
 
 ul {
@@ -47,4 +52,24 @@ li:last-child {
     main {
         grid-template-columns: 1fr;
     }
+}
+
+/* Black and White Theme */
+header {
+    background-image: linear-gradient(to bottom, #444, #333);
+}
+
+section {
+    background-image: linear-gradient(to bottom, #fff, #f7f7f7);
+}
+
+h2 {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
 }
