@@ -15,3 +15,10 @@ skillsSection.addEventListener('click', () => {
 projectsSection.addEventListener('click', () => {
     projectsSection.classList.toggle('active');
 });
+
+// Add active class to sections
+document.addEventListener('DOMContentLoaded', () => {
+    educationSection.classList.add('active');
+    skillsSection.classList.add('active');
+    projectsSection.classList.add('active');
+});
