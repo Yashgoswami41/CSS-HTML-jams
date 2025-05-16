@@ -1,0 +1,111 @@
+/* General body styling */
+body {
+    font-family: apple-system, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Main container styling */
+  #main {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  /* Title styling */
+  #title {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    color: #333333;
+  }
+  
+  /* Description styling */
+  #description {
+    text-align: center;
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+  
+  /* Image container styling */
+  #img-div {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  #img-caption {
+    text-align: center;
+    font-size: 14px;
+    color: #777777;
+    margin-top: 10px;
+  }
+  
+  /* Subtitle styling */
+  #subtitle {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    color: #444444;
+  }
+  
+  /* Timeline styling */
+  ul {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    margin: 15px 0;
+    text-align: justify;
+    color: #333333;
+  }
+  
+  li strong {
+    color: #444444;
+  }
+  
+  /* Quote styling */
+  #quote {
+    font-style: italic;
+    text-align: justify;
+    max-width: 500px;
+    margin: 20px auto;
+    color: #555555;
+  }
+  
+  /* Footer link styling */
+  #footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #tribute-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #tribute-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
