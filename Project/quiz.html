@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizapp</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div>
+        <h2 id="question">Question text here</h2>
+        <div id="options"></div>
+        <button id="nextBtn" disabled>Next</button>
+        <div id="score"></div>
+    </div>
+<script>
+    const questions = [
+        {
+            question: "What does HTML stand for?",
+            options: ["Hyper Text Markup Language", "High Text Markup Language", "Hyper Tabular Markup Language", "None of these"],
+            answer: "Hyper Text Markup Language"
+        },
+        {
+            question: "What does CSS stand for?",
+            options: ["Cascading Style Sheets", "Cascading Style System", "Cascading Sheet Styles", "None of these"], 
+            answer: "Cascading Style Sheets"
+        },
+        {
+            question: "What does JS stand for?",
+            options: ["JavaScript", "JavaStyle", "JavaScript Style", "None of these"],
+            answer: "JavaScript"
+        },
+        {
+            question: "Which HTML element is used to define the structure of a webpage?",
+            options: ["<div>", "<span>", "<section>", "<article>"],
+            answer: "<div>"
+        },
+        {
+            question: "Which CSS property is used to change the text color of an element?",
+            options: ["color", "text-color", "font-color", "background-color"],
+            answer: "color"
+        }
+    ];
+     let currentQuestion = 0;
+     let score = 0; 
+        const questionE1 = document.getElementById("question");
+        const optionsE1 = document.getElementById("options");
+        const nextBtn = document.getElementById("nextBtn");
+        const scoreE1 = document.getElementById("score");
+
+        function loadQuestion() {
+            nextBtn.disabled = true;
+             questionE1.textContent = questions[currentQuestion].question;
+             optionsE1.innerHTML = "";
+
+               questions[currentQuestion].options.forEach(optionText => { 
+                const option = document.createElement("div");
+                option.className = "option";
+                option.textContent = optionText;
+                option.addEventListener("click", () => selectOption(option,optionText));
+                optionsE1.appendChild(option);
+        }); 
+            }
+
+            
+            function selectOption(selectedE1,selectedAnswer) {
+                const correctAnswer = questions[currentQuestion].answer;
+                Array.from(optionsE1.children).forEach(option => {
+                    option.classList.add(option.textContent === correctAnswer ? 'correct' : 'incorrect');
+                    option.style.pointerEvents = 'none';
+                });
+                if (selectedAnswer === correctAnswer) {
+                    score++;
+                }
+                nextBtn.disabled = false;
+            }
+            
+            
+            nextBtn.addEventListener("click", () => {
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    loadQuestion();
+                } else {
+                    showscore();
+                }
+            });
+
+            function showscore() {
+                questionE1.textContent = "Quiz Completed!";
+                optionsE1.innerHTML = " ";
+                nextBtn.style.display = "none";
+                scoreE1.textContent =  `Your score is ${score} out of ${questions.length}`;
+            }
+            loadQuestion();
+        </script>
+    </body>
+</html>
